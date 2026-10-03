@@ -1,4 +1,8 @@
 package in.nikhil.notification;
 
-public class SmsService {
+public class SmsService implements NotificationService {
+
+    public void sendNotification() {
+        System.out.println("SMS notification sent");
+    }
 }

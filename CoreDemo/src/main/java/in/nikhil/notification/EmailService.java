@@ -1,7 +1,8 @@
 package in.nikhil.notification;
 
-public class EmailService {
+public class EmailService implements NotificationService {
 
+    @Override
     public void sendNotification() {
         System.out.println("Email notification sent");
     }
