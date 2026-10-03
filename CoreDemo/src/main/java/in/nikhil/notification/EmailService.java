@@ -1,4 +1,4 @@
-package in.nikhil;
+package in.nikhil.notification;
 
 public class EmailService {
 
