@@ -12,7 +12,9 @@ public class Main {
 
         NotificationService notification = new PopupService();
 
-        OrderService order = new OrderService(notification);
+//        OrderService order = new OrderService(notification);
+        OrderService order = new OrderService();
+        order.setNotification(notification);
         order.placeOrder();
     }
 }
