@@ -13,6 +13,12 @@ public class Main {
 //        OrderService order = new OrderService(payment);
 //        order.placeOrder();
 
-        ApplicationContext context = new AnnotationConfigApplicationContext();
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        OrderService order = context.getBean(OrderService.class);
+        order.placeOrder();
+
+        PaymentService payment = context.getBean(PaymentService.class);
+        payment.pay();
     }
 }
