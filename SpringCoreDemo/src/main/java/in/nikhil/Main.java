@@ -20,5 +20,9 @@ public class Main {
 
 //        PaymentService payment = context.getBean(PaymentService.class);
 //        payment.pay();
+
+        UserService user = context.getBean(UserService.class);
+        System.out.println(user.getName());
+        System.out.println(user.getAge());
     }
 }
