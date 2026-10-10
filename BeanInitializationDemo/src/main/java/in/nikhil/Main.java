@@ -1,5 +1,6 @@
 package in.nikhil;
 
+import in.nikhil.classes.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
