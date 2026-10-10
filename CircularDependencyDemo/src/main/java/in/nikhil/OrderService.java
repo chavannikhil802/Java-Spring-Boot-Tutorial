@@ -18,6 +18,7 @@ public class OrderService {
     public void placeOrder() {
         paymentService.pay();
         System.out.println("Order placed");
+        getOrderDetails();
     }
 
     public void getOrderDetails() {

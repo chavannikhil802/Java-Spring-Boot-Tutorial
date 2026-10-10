@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 public class PaymentService {
 
 //  FIELD DEPENDENCY INJECTION
-    @Autowired
-    OrderService orderService;
+//    @Autowired
+//    OrderService orderService;
 
 //    CONSTRUCTOR DEPENDENCY INJECTION
 //    public PaymentService(OrderService orderService) {
@@ -17,6 +17,8 @@ public class PaymentService {
 
     public void pay() {
         System.out.println("Payment done");
-        orderService.getOrderDetails();
+
+//        NOT IT's REPONSIBILITY
+//        orderService.getOrderDetails();
     }
 }
