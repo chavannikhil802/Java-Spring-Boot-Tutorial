@@ -4,6 +4,7 @@ import in.nikhil.classes.AppConfig;
 import in.nikhil.classes.CartService;
 import in.nikhil.classes.OrderService;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     static void main() {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
 //        OrderService order = context.getBean(OrderService.class);
 //        order.placeOrder();
@@ -22,5 +23,7 @@ public class Main {
 
         CartService cart = context.getBean(CartService.class);
         System.out.println(cart.getValue(1));
+
+        context.close();
     }
 }
