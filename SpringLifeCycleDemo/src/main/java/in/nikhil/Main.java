@@ -14,5 +14,9 @@ public class Main {
 
         OrderService order = context.getBean(OrderService.class);
         order.placeOrder();
+
+//      IoC CONTAINER ALSO MANAGES THE BEAN OF AppConfig class
+        AppConfig config = context.getBean(AppConfig.class);
+        config.demo();
     }
 }
