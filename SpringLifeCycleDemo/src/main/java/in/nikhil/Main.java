@@ -1,6 +1,7 @@
 package in.nikhil;
 
 import in.nikhil.classes.AppConfig;
+import in.nikhil.classes.CartService;
 import in.nikhil.classes.OrderService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -18,5 +19,8 @@ public class Main {
 //      IoC CONTAINER ALSO MANAGES THE BEAN OF AppConfig class
 //        AppConfig config = context.getBean(AppConfig.class);
 //        config.demo();
+
+        CartService cart = context.getBean(CartService.class);
+        System.out.println(cart.getValue(1));
     }
 }

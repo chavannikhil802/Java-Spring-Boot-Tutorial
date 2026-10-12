@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 //BeanNameAware is Aware Interface
-@Component("userBean")
+//@Component("userBean")
 public class UserService implements BeanNameAware, ApplicationContextAware {
 
     public UserService() {
