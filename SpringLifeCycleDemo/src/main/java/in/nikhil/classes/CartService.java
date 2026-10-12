@@ -1,12 +1,13 @@
 package in.nikhil.classes;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
-//@Component
+@Component
 public class CartService /* implements InitializingBean */ {
 
     Map<Integer, String> mp;
@@ -31,7 +32,14 @@ public class CartService /* implements InitializingBean */ {
         return mp.get(key);
     }
 
-    public void start() {
+//    public void start() {
+//        System.out.println("Initialization callback - Bean is ready");
+//        mp.put(1, "Nikhil");
+//        mp.put(2, "Umesh");
+//    }
+
+    @PostConstruct
+    public void start2() {
         System.out.println("Initialization callback - Bean is ready");
         mp.put(1, "Nikhil");
         mp.put(2, "Umesh");

@@ -11,8 +11,8 @@ public class AppConfig {
 //        System.out.println("Demo");
 //    }
 
-    @Bean(initMethod = "start")
-    public CartService getCartBean() {
-        return new CartService();
-    }
+//    @Bean(initMethod = "start")
+//    public CartService getCartBean() {
+//        return new CartService();
+//    }
 }
