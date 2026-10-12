@@ -1,5 +1,4 @@
 package in.nikhil.classes;
-
 import org.springframework.stereotype.Component;
 
 @Component

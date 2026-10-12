@@ -12,11 +12,11 @@ public class Main {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        OrderService order = context.getBean(OrderService.class);
-        order.placeOrder();
+//        OrderService order = context.getBean(OrderService.class);
+//        order.placeOrder();
 
 //      IoC CONTAINER ALSO MANAGES THE BEAN OF AppConfig class
-        AppConfig config = context.getBean(AppConfig.class);
-        config.demo();
+//        AppConfig config = context.getBean(AppConfig.class);
+//        config.demo();
     }
 }
