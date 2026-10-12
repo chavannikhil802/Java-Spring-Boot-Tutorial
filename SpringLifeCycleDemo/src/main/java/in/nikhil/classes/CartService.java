@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
-public class CartService implements BeanNameAware, ApplicationContextAware, DisposableBean/* implements InitializingBean */ {
+//@Component
+public class CartService implements BeanNameAware, ApplicationContextAware /*, DisposableBean implements InitializingBean */ {
 
     Map<Integer, String> mp;
 
@@ -39,18 +39,23 @@ public class CartService implements BeanNameAware, ApplicationContextAware, Disp
 //        mp.put(2, "Umesh");
 //    }
 
-//    public void start() {
-//        System.out.println("Initialization callback - Bean is ready");
-//        mp.put(1, "Nikhil");
-//        mp.put(2, "Umesh");
-//    }
-
-    @PostConstruct
-    public void start2() {
+    public void start() {
         System.out.println("Initialization callback - Bean is ready");
         mp.put(1, "Nikhil");
         mp.put(2, "Umesh");
     }
+
+    public void stop() {
+        mp.clear();
+        System.out.println("Bean is getting destroyed");
+    }
+
+//    @PostConstruct
+//    public void start2() {
+//        System.out.println("Initialization callback - Bean is ready");
+//        mp.put(1, "Nikhil");
+//        mp.put(2, "Umesh");
+//    }
 
     public void addToCart() {
         System.out.println("Added to Cart");
@@ -60,9 +65,9 @@ public class CartService implements BeanNameAware, ApplicationContextAware, Disp
         return mp.get(key);
     }
 
-    @Override
-    public void destroy() throws Exception {
-        mp.clear();
-        System.out.println("Bean is getting destroyed");
-    }
+//    @Override
+//    public void destroy() throws Exception {
+//        mp.clear();
+//        System.out.println("Bean is getting destroyed");
+//    }
 }
