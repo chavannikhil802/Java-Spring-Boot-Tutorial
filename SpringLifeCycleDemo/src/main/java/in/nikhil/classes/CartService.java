@@ -1,6 +1,7 @@
 package in.nikhil.classes;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Component
+@Component
 public class CartService implements BeanNameAware, ApplicationContextAware /*, DisposableBean implements InitializingBean */ {
 
     Map<Integer, String> mp;
@@ -39,16 +40,16 @@ public class CartService implements BeanNameAware, ApplicationContextAware /*, D
 //        mp.put(2, "Umesh");
 //    }
 
-    public void start() {
-        System.out.println("Initialization callback - Bean is ready");
-        mp.put(1, "Nikhil");
-        mp.put(2, "Umesh");
-    }
+//    public void start() {
+//        System.out.println("Initialization callback - Bean is ready");
+//        mp.put(1, "Nikhil");
+//        mp.put(2, "Umesh");
+//    }
 
-    public void stop() {
-        mp.clear();
-        System.out.println("Bean is getting destroyed");
-    }
+//    public void stop() {
+//        mp.clear();
+//        System.out.println("Bean is getting destroyed");
+//    }
 
 //    @PostConstruct
 //    public void start2() {
@@ -56,6 +57,12 @@ public class CartService implements BeanNameAware, ApplicationContextAware /*, D
 //        mp.put(1, "Nikhil");
 //        mp.put(2, "Umesh");
 //    }
+
+    @PreDestroy
+    public void stop() {
+        mp.clear();
+        System.out.println("Bean is getting destroyed");
+    }
 
     public void addToCart() {
         System.out.println("Added to Cart");
