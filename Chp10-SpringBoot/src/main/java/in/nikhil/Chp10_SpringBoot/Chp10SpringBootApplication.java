@@ -2,15 +2,23 @@ package in.nikhil.Chp10_SpringBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class Chp10SpringBootApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(Chp10SpringBootApplication.class, args);
+		ApplicationContext context = SpringApplication.run(Chp10SpringBootApplication.class, args);
 
-		System.out.println("Hello World");
+		PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
+
+//		paymentGateway.setType("Paytm");
+//		paymentGateway.setRetryCount(5);
+
+		System.out.println(paymentGateway.getType());
+		System.out.println(paymentGateway.getRetryCount());
+
 	}
 
 }
