@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentGateway {
-    @Value("${paymentGateway.type}")
+    @Value("${paymentGateway.type:Razorpay}")
     private String type;
 
     @Value("${paymentGateway.retry-count}")
