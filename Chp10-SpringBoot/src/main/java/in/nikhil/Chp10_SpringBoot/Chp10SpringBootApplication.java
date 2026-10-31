@@ -11,9 +11,9 @@ public class Chp10SpringBootApplication {
 
 		ApplicationContext context = SpringApplication.run(Chp10SpringBootApplication.class, args);
 
-		PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
-
-		paymentGateway.print();
+//		PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
+//
+//		paymentGateway.print();
 	}
 
 }
