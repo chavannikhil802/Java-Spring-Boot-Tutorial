@@ -2,10 +2,26 @@ package in.nikhil.Chp10_SpringBoot;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+//@Component
+//public class DemoRunner implements ApplicationRunner {
+//
+//    private PaymentGateway paymentGateway;
+//
+//    public DemoRunner(PaymentGateway paymentGateway) {
+//        this.paymentGateway = paymentGateway;
+//    }
+//
+//    @Override
+//    public void run(ApplicationArguments args) throws Exception {
+//        paymentGateway.print();
+//    }
+//}
+
 @Component
-public class DemoRunner implements ApplicationRunner {
+public class DemoRunner implements CommandLineRunner {
 
     private PaymentGateway paymentGateway;
 
@@ -14,7 +30,7 @@ public class DemoRunner implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(String... args) throws Exception {
         paymentGateway.print();
     }
 }
