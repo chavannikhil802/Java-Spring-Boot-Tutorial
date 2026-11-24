@@ -1,12 +1,22 @@
 package in.nikhil.crudSpringBootDemo.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Student {
 
+    @Id
+    private Long id;
     private String name;
     private int age;
     private String email;
     private int rollNo;
     private String subject;
+
+    public Long getId() { return id; }
+
+    public void setId(Long id) { this.id = id; }
 
     public String getName() {
         return name;
