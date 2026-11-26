@@ -1,12 +1,10 @@
 package in.nikhil.crudSpringBootDemo.repository;
 
 import in.nikhil.crudSpringBootDemo.entity.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StudentRepository {
+public interface StudentRepository extends JpaRepository<Student, Long> {
 
-    public Student saveStudent(Student studentReq) {
-        return null;
-    }
 }
