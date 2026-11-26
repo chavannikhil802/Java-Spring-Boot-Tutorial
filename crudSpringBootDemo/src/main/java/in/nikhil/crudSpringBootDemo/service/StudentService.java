@@ -14,9 +14,7 @@ public class StudentService {
     }
 
     public Student createStudent(Student studentReq) {
-        System.out.println("Inside Student Service");
         Student studentResp = studentRepository.saveStudent(studentReq);
-        System.out.println("Exiting Student Service");
         return studentResp;
     }
 }
